@@ -1,0 +1,54 @@
+#flexcontainer {
+    border: 10px solid black;
+    display: flex; 
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+@media screen and (max-width: 300px) {
+    #medium, #large {
+        display: none;
+
+    }
+    body {
+        background-color: red;
+    }
+
+    #flexcontainer {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 301px) and (max-width: 768px) {
+    #small, #large {
+        display: none;
+    }
+    body {
+        background-color: green;
+    }
+
+    #flexsmall {
+        flex: 66%
+    }
+
+    #flexmedium {
+        flex: 33%;
+    }
+
+    #flexlarge {
+        flex: 100%;
+        text-align: center;
+    }
+ 
+}
+
+@media screen and (min-width: 768px) {
+    #small, #medium {
+        display: none;
+    }
+    body {
+        background-color: blue;
+    }
+    
+}
